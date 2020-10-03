@@ -21,7 +21,7 @@ class _PlaceholderPageState extends State<PlaceholderPage> {
     return Theme(
         data: theme,
         child: Scaffold(
-            appBar: primaryAppBar(title: getString(context, 'placeholder_page_title')),
+            appBar: PrimaryAppBar(title: getString(context, 'placeholder_page_title')),
             body: Container(
               child: AppTexts.body(getString(context, 'placeholder_page_message'), theme),
             )

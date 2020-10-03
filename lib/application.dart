@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:teste_app_flutter/app_localization.dart';
 import 'package:teste_app_flutter/core/navigation/application_route.dart';
 import 'package:teste_app_flutter/feature/home/presentation/page/home_page.dart';
+import 'package:teste_app_flutter/feature/pet/presentation/page/pet_list_page.dart';
 import 'package:teste_app_flutter/feature/placeholder/presentation/page/placeholder_page.dart';
 import 'package:teste_app_flutter/ui/theme/app_theme.dart';
 
@@ -11,6 +12,7 @@ class Application extends StatelessWidget {
   static var routes = {
     ApplicationRoute.home: (BuildContext context) => HomePage(),
     ApplicationRoute.placeholder: (BuildContext context) => PlaceholderPage(),
+    ApplicationRoute.petList: (BuildContext context) => PetListPage(),
   };
 
   // This widget is the root of your application.

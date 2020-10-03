@@ -2,5 +2,19 @@
   "app_name": "Noknox",
 
   "placeholder_page_title": "Placeholder",
-  "placeholder_page_message": "Olá! Essa é só uma página em branco. Com algum texto. é."
+  "placeholder_page_message": "Olá! Essa é só uma página em branco. Com algum texto. é.",
+
+  "menu_item_vehicles": "Veículos",
+  "menu_item_pets": "Pets",
+  "menu_icon_profile": "Perfil",
+
+  "pet_area_page_title": "Área Pet",
+  "pet_area_menu_item_my_pets": "Meus Pets",
+  "pet_area_menu_item_missing_pet": "Meu Pet Sumiu",
+  "pet_area_menu_item_pet_sitter": "Pet Sitter",
+
+  "pet_list_page_title": "Meus Pets",
+  "pet_list_no_pets_message": "Você não tem nenhum pet cadastrado",
+  "pet_list_no_pets_cta": "Comece Já",
+  "pet_list_no_pets_add_new": "Cadastrar Novo"
 }
