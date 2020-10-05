@@ -27,7 +27,7 @@ class PetLocalDataSourceImpl extends MemoryDatabase implements PetLocalDataSourc
   void setup() async {
     await this.teardown();
 
-    final pets = List<PetModel>.generate(30,
+    final pets = List<PetModel>.generate(25,
             (i) => PetModel()
               ..id = nanoid(15)
               ..name = 'Pet $i'
