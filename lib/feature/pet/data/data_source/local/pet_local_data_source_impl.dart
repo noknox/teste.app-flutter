@@ -11,21 +11,11 @@ class PetLocalDataSourceImpl extends MemoryDatabase implements PetLocalDataSourc
 
   @override
   Future<List<PetModel>> list(String unitToken, [String lastPetId]) async {
-    final data = await this.readAll();
-    var models = data.map((e) => PetModel.fromJson(e)).toList();
-    models.sort((a, b) => a.hashCode.compareTo(b.hashCode));
-
     // Fake delay to give view enough time to display all rendering phases
     await Future.delayed(Duration(seconds: 2));
 
-    if (lastPetId?.isNotEmpty == true) {
-      final start = models.indexWhere((e) => e.id == lastPetId);
-      if (start > 0) {
-        models = models.sublist(start).take(10);
-      }
-    }
-
-    return models;
+    final data = await this.readAll(0, 10, sortedBy: 'name');
+    return data.map((e) => PetModel.fromJson(e)).toList();
   }
 
   @override
@@ -68,5 +58,4 @@ class PetLocalDataSourceImpl extends MemoryDatabase implements PetLocalDataSourc
     else if (i % 2 == 0) return 'https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png';
     return 'https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg';
   }
-
 }
